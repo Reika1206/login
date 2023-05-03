@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Registration</title>
+</head>
+<body>
+<div class="head">
+  <h1>Student Registration</h1>
+</div>
+
+    <div class="login-box">
+        <p>Admin Login</p>
+        <form action="">
+          <div class="user-box">
+            <input required="" name="" type="text">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input required="" name="" type="password" id="ps">
+            <label>Password</label>
+          </div>
+          <div class="show">
+            <input type="checkbox" onclick="showPass()" name="">
+            <label>Show Password</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+        <p>Don't have an account? <a class="a2" onclick="signupToggle()">Register here!!</a></p>
+      </div>
+
+
+      <div class="register-box">
+        <div class="form">
+          <div class="close" onclick="signupToggle()">&times;</div>
+          </div>
+        <p>Admin Registration</p>
+        <form action="">
+          <div class="register-admin-box">
+            <input required="" name="" type="text">
+            <label>Firstname</label>
+          </div>
+          <div class="register-admin-box">
+            <input required="" name="" type="text">
+            <label>Lastname</label>
+          </div>
+          <div class="register-admin-box">
+            <input required="" name="" type="text">
+            <label>Username</label>
+          </div>
+          <div class="register-admin-box">
+            <input required="" name="" type="password" id="ps">
+            <label>Password</label>
+          </div>
+          <div class="show">
+            <input type="checkbox" onclick="showPass()" name="">
+            <label>Show Password</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
+
+
+    <script>
+        function showPass(){
+            var x = document.getElementById("ps");
+            if (x.type === "password"){
+                x.type = "text";
+            }else{
+                x.type = "password";
+            }
+        }
+        function signupToggle(){
+            var container = document.querySelector('.login-box');
+            container.classList.toggle('active');
+            var popup = document.querySelector('.register-box');
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
